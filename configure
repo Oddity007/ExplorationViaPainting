@@ -1,0 +1,6 @@
+#!/bin/sh
+#calls cmake with proper compiler
+#rm -rf build
+mkdir -p build
+cd build
+cmake ../src

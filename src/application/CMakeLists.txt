@@ -1,0 +1,7 @@
+add_executable(gx main.cpp)
+#message(STATUS Libraries ${BULLET_LIBRARIES})
+target_link_libraries(gx lua Core Renderer glfw physfs ${GLFW_LIBRARIES} ${OPENGL_LIBRARIES} ${OPENCL_LIBRARIES} assimp ${BULLET_LIBRARIES} ${CGAL_LIBRARIES} ${BOOST_THREAD_LIBRARIES} ${GMP_LIBRARIES})
+#target_link_libraries(gx lua Core Renderer glfw physfs ${GLFW_LIBRARIES} ${OPENGL_LIBRARIES} ${OPENCL_LIBRARIES} assimp ${CGAL_LIBRARIES} ${BOOST_THREAD_LIBRARIES} ${GMP_LIBRARIES})
+include_directories(${OPENCL_INCLUDE_DIRS} ${BULLET_INCLUDE_DIRS} bullet3/src)
+#include_directories(${OPENCL_INCLUDE_DIRS})
+install(TARGETS gx DESTINATION ${PROJECT_SOURCE_DIR}/..)
